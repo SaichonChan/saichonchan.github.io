@@ -27,6 +27,9 @@
   function update_IPO_Margin(status) {
           $("#IPO_Margin").text(String(status));
         }
+  function update_data(status) {
+          $("#node1").text(String(status));
+        }
 
 //ทางลัด
 // function update_data(id,number) {
@@ -34,9 +37,62 @@
 // }
 
 
+
+
+console.log(cause_detail);
+//var DateRestore1 = $("#DateRestore1").Date();
+function writeUserData(DateOutage,DateRestore1,EquipWork,wheather,status,cause,cause_detail)//,x_coord,y_coord){//, EquipWork, EventID,cause,cause_detail,status,wheather,x_coord,y_coord) {
+  firebase.database().ref('OutageCause/' + String(Math.floor(Math.random()*10))).set({
+    cause_detail: cause_detail,
+    DateRestore1: DateRestore1,
+    DateOutage: DateOutage,
+    EquipWork: EquipWork,
+    EventID:EventID,
+    cause:cause,
+    cause_detail:cause_detail,
+    status:status,
+    wheather:wheather,
+//    x_coord:x_coord,
+//    y_coord:y_coord,
+
+  });
+}
+
 //จะรันก่อนเมื่อเปิดหน้า index
 $( document ).ready(function() {
     console.log("starting document!!!!");
+
+
+//สั่งงานปุ่มเมื่อคลิก
+$(function ($) {
+
+         $("#firebasebutton").click(function (evt) {
+           var cause_detail = document.getElementById("cause_detail").value;
+           var DateRestore1 = document.getElementById("DateRestore1").value;
+           var DateOutage = document.getElementById("DateOutage").value;
+           var EquipWork = document.getElementById("EquipWork").value;
+           var wheather = document.getElementById("wheather").value;
+           var status = document.getElementById("status").value;
+           var cause = document.getElementById("cause").value;
+           //var x_coord = document.getElementById("x_coord").value;
+           //var y_coord = document.getElementById("y_coord").value;
+
+           console.log(cause_detail,DateRestore1,DateOutage);
+
+           console.log("firebasebutton was clicked")
+           writeUserData(DateOutage,DateRestore1,EquipWork,wheather,status,cause,cause_detail)//,x_coord,y_coord)//#DateRestore1, EquipWork, EventID,cause,cause_detail,status,wheather,x_coord,y_coord)
+         })
+     });
+
+//การส่งจากหน้า html
+        // function myFunction() {
+      //       var x = document.getElementById("myText").value;
+    //         document.getElementById("demo").innerHTML = x;
+    //         console.log(x);
+    //     }
+
+
+
 
     // Initialize Firebase
     console.log("Initialize Firebase");
@@ -62,7 +118,7 @@ $( document ).ready(function() {
   //  total_load_activePower = 0;
   // ให้ไปฟังการเปลี่ยนแปลงของ firebase
     var member_profitRef= firebase.database().ref("member");
-
+    var testRef= firebase.database().ref();
 member_profitRef.on("child_changed", function(data) {
         console.log(data.key);
         console.log(data.val());
@@ -96,9 +152,12 @@ member_profitRef.on("child_changed", function(data) {
             }
             else if(data.key=='IPO_Margin'){
               update_IPO_Margin(parseInt(data.val()));
+              // writeUserData('saichon', 'saichon88', 'saichon1067@gmail.com', 'http://www.smeleader.com/wp-content/uploads/2017/02/ธุรกิจฟาร์มสุนัข-“Golden-Amy”-สร้างสุนัขนักล่ารางวัล-ทำรายได้หลักแสนต่อตัว-3.jpg')
             }
             else {
               console.log("need to parse this key " + data.key)
+              update_data(parseInt(data.val()));
+              // writeUserData(saichon, saichon09, saichon1067@gmail.com, http://www.smeleader.com/wp-content/uploads/2017/02/ธุรกิจฟาร์มสุนัข-“Golden-Amy”-สร้างสุนัขนักล่ารางวัล-ทำรายได้หลักแสนต่อตัว-3.jpg)
             }
     });
 

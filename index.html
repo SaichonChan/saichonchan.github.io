@@ -22,6 +22,8 @@
   <link rel="stylesheet" href="assets/gallery/style.css">
   <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
   <link rel="stylesheet" href="assets/vendors/custom/fullcalendar/fullcalendar.bundle.css">
+<!--outage-->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700%7CRoboto:300,400,500,600,700">
 
   <!--begin::Web font -->
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
@@ -4657,7 +4659,7 @@
       <a href="https://plot.ly/~SaichonChanecba/1/?share_key=174l0VpvvyiZexvPxGHjOT" target="_blank" title="Plot 1" style="display: block; text-align: center;"><img src="https://plot.ly/~SaichonChanecba/1.png?share_key=174l0VpvvyiZexvPxGHjOT" alt="Plot 1" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
       <script data-plotly="SaichonChanecba:1" sharekey-plotly="174l0VpvvyiZexvPxGHjOT" src="https://plot.ly/embed.js" async></script>
   </div>
-<!--input from -->
+<!--input from
 <div class="form-group m-form__group row">
   <label for="example-date-input" class="col-2 col-form-label">
     Date
@@ -4692,9 +4694,7 @@
 </div>
 
 
-
-
-<!-- <div class="form-group m-form__group row">
+<div class="form-group m-form__group row">
   <label for="example-text-input" class="col-2 col-form-label">
     Text
   </label>
@@ -4799,6 +4799,185 @@
   </div>
 </div>
 </div>-->
+</div>
+<!--begin::Form-->
+<form class="m-form m-form--fit m-form--label-align-right">
+  <div class="m-portlet__body">
+    <div class="form-group m-form__group m--margin-top-10">
+      <div class="alert m-alert m-alert--default" role="alert">
+      กรอกข้อมูลสาเหตุไฟฟ้าขัดข้อง
+      </div>
+    </div>
+  <!--  <div class="form-group m-form__group">
+      <label for="exampleInputEmail1">
+        Email address
+      </label>
+      <input type="email" class="form-control m-input m-input--air" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+      <span class="m-form__help">
+        We'll never share your email with anyone else.
+      </span>
+    </div>
+
+    <div class="form-group m-form__group">
+      <label for="exampleInputPassword1">
+        Password
+      </label>
+      <input type="password" class="form-control m-input m-input--air" id="exampleInputPassword1" placeholder="Password">
+    </div>
+    -->
+  </div>
+                                 <div class="form-group m-form__group row">
+                                   <label for="example-datetime-local-input" class="col-2 col-form-label">
+                                     วันเวลาที่เกิดเหตุการไฟฟ้าขัดข้อง
+                                   </label>
+                                   <div class="col-10">
+                                     <input class="form-control m-input" type="datetime-local" value="2011-08-19T13:45:00" id="DateOutage">
+                                   </div>
+
+
+      <!-- <select class="form-control m-input m-input--air" id="exampleSelect2">
+        <option>
+          LBA01B-01
+        </option>
+        <option>
+          LBA01B-02
+        </option>
+
+      </select> -->
+    </div>
+  </div>
+                                 <div class="form-group m-form__group row">
+                                   <label for="example-datetime-local-input" class="col-2 col-form-label">
+                                     วันเวลาที่จ่ายไฟกลับคืน
+                                   </label>
+                                   <div class="col-10">
+                                     <input class="form-control m-input" type="datetime-local" value="2011-08-19T13:45:00" id="DateRestore1">
+                                   </div>
+
+    <div class="form-group m-form__group">
+      <label for="exampleSelect2">
+        รหัสอุปกรณ์ที่ทำงาน
+      </label>
+      <select class="substations"></select>
+      <!-- <select class="form-control m-input m-input--air" id="exampleSelect2">
+        <option>
+          LBA01B-01
+        </option>
+        <option>
+          LBA01B-02
+        </option>
+
+      </select> -->
+    </div>
+<!--สภาพอากาศ-->
+    <div class="form-group m-form__group">
+      <label for="exampleSelect2">
+        สภาพอากาศ
+      <select class="form-control m-input m-input--air" id="exampleSelect2">
+        <option>
+          ปกติ
+        </option>
+        <option>
+          ลมแรง
+        </option>
+        <option>
+          ฝนตก
+        </option>
+        <option>
+          ฝนตก ฟ้าคะนอง
+        </option>
+
+      </select>
+    </div>
+<!--กลุ่มสาเหตุ-->
+    <div class="form-group m-form__group">
+      <label for="exampleSelect1">
+        กลุ่มสาเหตุ
+      </label>
+      <select class="form-control m-input m-input--air" id="exampleSelect1">
+        <option>
+          ต้นไม้
+        </option>
+        <option>
+          สัตว์
+        </option>
+        <option>
+          อุปกรณ์
+        </option>
+        <option>
+          สภาพสิ่งแวดล้อม
+        </option>
+        <option>
+          ภัยธรรมชาติ
+        </option>
+        <option>
+          ยานพาหนะ
+        </option>
+        <option>
+          ภัยธรรมชาติ
+        </option>
+        <option>
+          พนักงาน กฟภ.
+        </option>
+        <option>
+          บุคคลภายนอก
+        </option>
+        <option>
+          วัสดุแปลกปลอม
+        </option>
+        <option>
+          จ่ายเกินพิกัด
+        </option>
+        <option>
+          ไม่ทราบสาเหตุ
+        </option>
+      </select>
+    </div>
+    <!--test-->
+
+    <!--combo T/L,T/R-->
+    <div class="form-group m-form__group">
+      <label for="exampleSelect2">
+        การทำงานของอุปกรณ์ (Trip Lockout,Trip Reclose)
+      </label>
+      <select class="form-control m-input m-input--air" id="exampleSelect2">
+        <option>
+          T/L
+        </option>
+        <option>
+          T/R
+        </option>
+
+      </select>
+    </div>
+    <!--Textbox cause detail-->
+    <div class="form-group m-form__group">
+      <label for="exampleTextarea">
+        รายละเอียดสาเหตุ(Cause Detail)
+      </label>
+      <textarea class="form-control m-input m-input--air" id="cause_detail" rows="3"></textarea>
+    </div>
+  </div>
+<!--Button-->
+  <div class="m-portlet__foot m-portlet__foot--fit">
+    <div class="m-form__actions">
+      <button type="reset" class="btn btn-accent" id="firebasebutton" >
+        **Send Data**
+      </button>
+      <button type="reset" class="btn btn-secondary">
+        Cancel
+      </button>
+    </div>
+  </div>-->
+</form>
+<!--end::Form-->
+</div>
+
+
+<div class="col-12 col-md-6">
+    <div class="google-map"><iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0Dx_boXQiwvdz8sJHoYeZNVTdoWONYkU&amp;q=place_id:ChIJg8x-bcGc4jARF_uWDR1CJ0M" allowfullscreen=""></iframe></div>
+</div>
+
 
 
 
@@ -4826,6 +5005,7 @@
   <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
   <script src="assets/js/test.js"></script>
+  <script src="assets/js/readcsv.js"></script>
   <script src="assets/vendors/base/vendors.bundle.js"></script>
   <script src="assets/demo/default/base/scripts.bundle.js"></script>
   <script src="assets/demo/default/custom/components/datatables/base/html-table.js"></script>
@@ -4833,6 +5013,8 @@
   <!--calendar -->
   <script src="assets/demo/default/custom/components/calendar/basic.js"></script>
   <script src="assets/vendors/custom/fullcalendar/fullcalendar.bundle.js"></script>
+
+
 
 </body>
 
